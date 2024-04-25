@@ -1,0 +1,39 @@
+React is a library for creating/building single page cloud native,Scalable web application.
+React is component based archeitecture. React is Codeless but has more functionalites.
+
+JSX(Javascript XML) is a templating engine used to build html by using javascript.Helps react to create light-weight virtual DOM.
+XML is used to transfer data from one omputer to other computer.
+
+Instead of using class="" in js, we use className="" in jsx.
+
+Components are reusable react functionality that will get input as props and outputs jsx or null.
+There are two types of Components
+ 1. Class-based Component
+ 2. Function-based Component
+
+ In js function returns a value, in react function returns either jsx or null
+
+Hooks:
+ ->useState - useState hook allows you to add/manage state to function components, it returns an array with two values
+   the current state and a function to update it. This is a stateful component.
+   syntax: 
+   const [count,setCount] = useState(0)
+   return(
+    <h2>I have {count} elements
+    <button onclick={() => setCount(count + 1)}> 
+   )
+
+ ->useEffect - useEffect hook is used to perform side effects in function components, side effects are operations
+   that change state of the component outside the component, such as fetching data, manually changing DOM.
+    useEffect hook accepts two arguments a function and array of dependencies.Function is the code that will be 
+    executed when component mounts/updates. 
+     array of dependencies is a list of values the will cause the function to re-execute when change.
+
+     useEffect(() => {
+      setTimeout(() => {
+        setCount((count) => count + 1)
+      })
+     })
+
+Passing data through props, for passing data from parent to child component we use props. Props data
+ is sent by parent component and cannot be changed by child component as they are read only.
